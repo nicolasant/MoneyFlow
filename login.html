@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Login | Finance Pro{% endblock %}
+{% block body_class %}login-body{% endblock %}
+
+{% block content %}
+<div class="login-screen">
+    <div class="login-card">
+        <div class="login-brand">
+            <span>💰</span>
+            <div>
+                <h2>Finance Pro</h2>
+                <p>Seu painel de controle financeiro</p>
+            </div>
+        </div>
+
+        <form method="POST" class="login-form">
+            <label for="username">Usuário ou Email</label>
+            <input 
+                id="username"
+                name="username" 
+                type="text"
+                placeholder="Digite seu usuário" 
+                required
+                autocomplete="username">
+
+            <label for="senha">Senha</label>
+            <input 
+                id="senha"
+                name="senha" 
+                type="password" 
+                placeholder="Digite sua senha" 
+                required
+                autocomplete="current-password">
+
+            <button type="submit">Entrar na conta</button>
+        </form>
+
+        <div style="margin-top: 20px; text-align: center; font-size: 0.85rem; color: var(--muted);">
+            <p>Credenciais padrão: admin / admin</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
